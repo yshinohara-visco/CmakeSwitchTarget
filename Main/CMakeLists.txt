@@ -11,8 +11,13 @@ add_executable(Main
     ${HEADERS}
 )
 
+target_compile_options(Main PUBLIC
+	-Wno-unknown-pragmas
+)
+
 target_link_libraries(Main
     ModuleA
+	ModuleC
 )
 
 target_include_directories(Main PUBLIC
